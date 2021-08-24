@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  /* font-size: 50px; */
+  /* アニメーションの名前 */
+  width: 200px;
+  animation-name: bigger-font;
+  /* アニメーションが何秒かけて実行されるかを設定 */
+  animation-duration: 3s;
+  /* どのように */
+  animation-timing-function: linear;
+  /* アニメーションの起動タイミング */
+  animation-delay: .5s;
+  /* アニメーションの回数 */
+  animation-iteration-count: 2;
+
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+}
+
+/* @keyframeを使い、プロパティを作成するイメージ */
+@keyframes bigger-font {
+  0%{
+    /* 初期値 */
+    /* font-size: 50px; */
+    width: 200px;
+  }
+  50%{
+    /* 初期値 */
+    /* font-size: 50px; */
+    width: 1000px;
+  }
+  100% {
+    /* 最終値 */
+    /* font-size: 100px; */
+    width: 800px;
+  }
+}
+
+button{
+  padding: 8px 20px;
+  background-color: red;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
+button:hover{
+  background-color: blue;
+}
+
+/* transitionはトリガーがないと意味がない */
